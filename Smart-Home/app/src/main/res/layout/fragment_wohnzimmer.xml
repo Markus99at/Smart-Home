@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="htl.at.smart_home.Wohnzimmer"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerTemperaturName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text=" Temperatur:"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerLuftfeuchtigkeitName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text=" Luftfeuchtigkeit:"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWohnzimmerTemperaturName" />
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerTemperatur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="49°C"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewWohnzimmerLuftfeuchtigkeitName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerLuftfeuchtigkeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:text="84%"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewWohnzimmerLuftfeuchtigkeitName"
+        app:layout_constraintStart_toStartOf="@+id/textViewWohnzimmerTemperatur"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWohnzimmerTemperatur" />
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerLastUpdated"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Zuletzt aktualisiert am 18.2.2018 um 19:27"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewWohnzimmerLightState"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWohnzimmerTemperaturName"
+        app:layout_constraintVertical_bias="0.18" />
+
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerLightBackground"
+        android:layout_width="0dp"
+        android:layout_height="154dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="176dp"
+        android:background="@drawable/back"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="     Licht"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonWohnzimmerLightOn"
+        app:layout_constraintStart_toStartOf="@+id/textViewWohnzimmerLightBackground"
+        app:layout_constraintTop_toTopOf="@+id/textViewWohnzimmerLightBackground" />
+
+    <Button
+        android:id="@+id/buttonWohnzimmerMainLightOn"
+        android:layout_width="152dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="on"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewWohnzimmerLightBackground"
+        app:layout_constraintEnd_toStartOf="@+id/buttonWohnzimmerMainLightOff"
+        app:layout_constraintStart_toStartOf="@+id/textViewWohnzimmerLightBackground"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWohnzimmerLight"
+        app:layout_constraintVertical_bias="0.0"
+        android:onClick="wohnzimmerMainLightOn"/>
+
+    <Button
+        android:onClick="wohnzimmerMainLightOff"
+        android:id="@+id/buttonWohnzimmerMainLightOff"
+        android:layout_width="152dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="off"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewWohnzimmerLightBackground"
+        app:layout_constraintEnd_toEndOf="@+id/textViewWohnzimmerLightBackground"
+        app:layout_constraintTop_toTopOf="@+id/buttonWohnzimmerMainLightOn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerLightState"
+        android:layout_width="85dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#a0d89f"
+        android:gravity="center"
+        android:text="off"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonWohnzimmerMainLightOff"
+        app:layout_constraintEnd_toEndOf="@+id/buttonWohnzimmerMainLightOff"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="@+id/buttonWohnzimmerMainLightOff"
+        app:layout_constraintTop_toTopOf="@+id/textViewWohnzimmerLightBackground"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerWorkingLightBackground"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="352dp"
+        android:background="@drawable/back"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerWorkingLight"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="12dp"
+        android:text=" Arbeitslicht"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonWohnzimmerWorkingLightOff"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonWohnzimmerWorkingLightOn"
+        app:layout_constraintTop_toTopOf="@+id/textViewWohnzimmerWorkingLightBackground" />
+
+    <Button
+        android:id="@+id/buttonWohnzimmerWorkingLightOn"
+        android:layout_width="152dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="on"
+        android:onClick="wohnzimmerWorkingLightOn"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewWohnzimmerWorkingLightBackground"
+        app:layout_constraintStart_toStartOf="@+id/textViewWohnzimmerWorkingLightBackground"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWohnzimmerWorkingLight"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:onClick="wohnzimmerWorkingLightOff"
+        android:id="@+id/buttonWohnzimmerWorkingLightOff"
+        android:layout_width="152dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="off"
+        app:layout_constraintEnd_toEndOf="@+id/textViewWohnzimmerWorkingLightBackground"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/buttonWohnzimmerWorkingLightOn"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWohnzimmerWorkingLightState" />
+
+    <TextView
+        android:id="@+id/textViewWohnzimmerWorkingLightState"
+        android:layout_width="85dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:background="#769f0300"
+        android:gravity="center"
+        android:text="off"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonWohnzimmerWorkingLightOff"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/buttonWohnzimmerWorkingLightOff"
+        app:layout_constraintTop_toTopOf="@+id/textViewWohnzimmerWorkingLightBackground" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_status"
+            android:icon="@drawable/status"
+            android:title="Status" />
+        <item
+            android:id="@+id/nav_wohnzimmer"
+            android:icon="@drawable/wohnzimmer"
+            android:title="Wohnzimmer" />
+        <item
+            android:id="@+id/nav_kuche"
+            android:icon="@drawable/kuche"
+            android:title="Küche" />
+        <item
+            android:id="@+id/nav_schlafzimmer"
+            android:icon="@drawable/schlafzimmer"
+            android:title="Schlafzimmer" />
+        <item
+            android:id="@+id/nav_badezimmer"
+            android:icon="@drawable/badezimmer"
+            android:title="Badezimmer" />
+        <item
+            android:id="@+id/nav_arbeitszimmer"
+            android:icon="@drawable/arbeitszimmer"
+            android:title="Arbeitszimmer" />
+        <item
+            android:id="@+id/nav_garage"
+            android:icon="@drawable/garage"
+            android:title="Garage" />
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="single">
+
+        <item
+        android:id="@+id/nav_debugging"
+        android:icon="@drawable/settings"
+        android:title="Debugging" />
+    </group>
+</menu>
